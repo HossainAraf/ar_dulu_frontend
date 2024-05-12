@@ -1,13 +1,19 @@
 //IMPORTS
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import './App.css';
 import Nav from './Components/Nav'
 
 function App() {
   return (
-    <>
-      <h1 class="text-3xl font-bold underline">"Hello World" </h1>
-      <h5 class="text-2xl">- Asadur Rahman Dulu</h5>
-    </>
+    <Router>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 

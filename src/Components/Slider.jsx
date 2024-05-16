@@ -1,5 +1,6 @@
 // IMPORTS
 import React from 'react';
+import 
 
 const Slider = ({ images }) => {
   // SLIDER LOGIC GOES HERE

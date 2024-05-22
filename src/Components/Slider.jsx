@@ -1,14 +1,14 @@
 // IMPORT
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 // SLIDER COMPONENT
 const Slider = ({ images, autoSlider =true, autoSliderInterval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // FUNCTION TO GO TO NEXT SLIDE
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((currentIndex + 1) % images.length);
-  };
+  }, [currentIndex, images.length]);
 
   // FUNCTIOIN TO GO TO PREVIOUS SLIDE
   const prevSlide = () => {

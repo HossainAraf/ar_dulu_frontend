@@ -21,7 +21,7 @@ const Slider = ({ images, autoSlider =true, autoSliderInterval = 3000 }) => {
       const slideInterval = setInterval(nextSlide, autoSliderInterval);
       return () => clearInterval(slideInterval);
     }
-  }, [currentIndex, autoSlider, autoSliderInterval]);
+  }, [currentIndex, nextSlide, autoSlider, autoSliderInterval]);
 
 
   return (

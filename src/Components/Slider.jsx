@@ -1,5 +1,6 @@
 // IMPORT
 import React, { useState, useEffect, useCallback } from 'react';
+import '../Styles/Slider.css';
 
 // SLIDER COMPONENT
 const Slider = ({ images, autoSlider =true, autoSliderInterval = 3000 }) => {

@@ -38,6 +38,18 @@ const Slider = ({ images, autoSlider =true, autoSliderInterval = 3000 }) => {
           />
         ))}
       </div>
+      <button
+        onClick={prevSlide}
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2"
+      >
+        Prev
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2"
+      >
+        Next
+      </button>
     </div>
   );
 }

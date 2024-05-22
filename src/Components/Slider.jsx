@@ -1,24 +1,21 @@
-// IMPORTS
+// Slider.jsx
 import React from 'react';
-import 
 
 const Slider = ({ images }) => {
-  // SLIDER LOGIC GOES HERE
-
   return (
     <div className="relative w-full overflow-hidden">
-    <div className="flex">
-      {images.map((image, index) => (
-        <img
-          key={index}
-          src={image}
-          alt={`Slide ${index}`}
-          className="w-full flex-shrink-0"
-        />
-      ))}
+      <div className="flex">
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`Slide ${index}`}
+            className="sloder-image"
+          />
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
 }
 
 export default Slider;
